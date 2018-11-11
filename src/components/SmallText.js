@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react'; 
 import { 
-  StyleSheet, 
+  StyleSheet,
+
   Text 
 } from 'react-native'; 
 import AppText from './AppText'; 
@@ -18,11 +19,8 @@ SmallText.propTypes = {
  
 const styles = StyleSheet.create({ 
   small: { 
-    fontSize:
-
-  }
-
+    fontSize: 11 
+  } 
 }); 
  
 export default SmallText;
-
