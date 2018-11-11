@@ -6,31 +6,43 @@ import {
 } from 'react-native'; 
 import Title from './Title'; 
  
-const Thumbnail = ({ url, titleText, accentColor, style }) => { 
+const Thumbnail = ({ style, titleText, accentColor, url }) => { 
   const imageStyle = { 
     backgroundColor: `${accentColor}77` // adds some transparency to the color 
   }; 
- 
-  return (
+  const TitleComponent = <Title style={styles.title}>{titleText}</Title>;
 
-<View style={[styles.container, { borderColor: accentColor }, style]}> 
+
+return ( 
+  <View style={[styles.container, { borderColor: accentColor }, style]}> 
+    {url.length > 0 ? ( 
       <Image 
-        style={[styles.image]} 
+        style={[styles.image, imageStyle]} 
         source={{ 
           uri: url 
         }} 
       > 
-        <Title style={styles.title}>{titleText}</Title> 
+        {TitleComponent} 
       </Image> 
-    </View> 
-  ); 
+    ) : ( 
+      <View 
+        style={[styles.image, imageStyle]} 
+      > 
+        {TitleComponent} 
+      </View> 
+    )} 
+  </View> 
+); 
 }; 
- 
+
 Thumbnail.propTypes = { 
-  style: View.propTypes.style, 
-  url: PropTypes.string.isRequired, 
-  titleText: PropTypes.string, 
-  accentColor: PropTypes.string.isRequired 
+style: View.propTypes.style, 
+url: PropTypes.string.isRequired, 
+accentColor: PropTypes.string.isRequired, 
+titleText: PropTypes.string
+
+
+
 }; 
  
 const styles = StyleSheet.create({ 
@@ -39,7 +51,7 @@ const styles = StyleSheet.create({
     borderStyle: 'solid' 
   }, 
   image: { 
-    height: 100,
+    height: 100, 
     justifyContent: 'flex-end' 
   }, 
   title: { 
