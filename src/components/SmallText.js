@@ -20,3 +20,9 @@ const styles = StyleSheet.create({
   small: { 
     fontSize:
 
+  }
+
+}); 
+ 
+export default SmallText;
+
