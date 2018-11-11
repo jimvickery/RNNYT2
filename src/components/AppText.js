@@ -4,8 +4,7 @@ import * as globalStyles from '../styles/global';
  
 const AppText = ({ children, style, ...rest }) => ( 
   <Text style={[globalStyles.COMMON_STYLES.text, style]} {...rest}>
-
-  {children} 
+    {children} 
   </Text> 
 ); 
  
