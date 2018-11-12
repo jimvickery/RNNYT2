@@ -1,5 +1,5 @@
 # RNNYT2
 
-Mastering React Native API with New York
+Mastering React Native with New York Times API
 
 Masiello, Eric. Mastering React Native 
