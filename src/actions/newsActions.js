@@ -11,3 +11,4 @@ export const searchNews = searchTerm => ({
   payload: searchTerm 
 });
 
+ 
