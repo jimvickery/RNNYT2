@@ -1,6 +1,6 @@
 import { LOAD_NEWS, SEARCH_NEWS } from './actionTypes'; 
-import mockData from '../mockData.json'; 
- 
+import NYT_API_KEY from '../config/nytApiKey';
+
 export const loadNews = () => ({ 
   type: LOAD_NEWS, 
   payload: mockData 
