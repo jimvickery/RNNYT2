@@ -11,6 +11,19 @@ const getMultimediaUrlByFormat = (multimedia, format) => {
   return matchingFormat.url; 
 };
 
+export const filterNewsBySearchTerm = (newsItems, searchTerm) => { 
+  // returns an empty list if you haven't typed anything 
+  if (searchTerm.length === 0) { 
+    return []; 
+  } 
+  return newsItems.filter(({ description, author, title }) => ( 
+    description.toLowerCase().indexOf(searchTerm) > -1 || 
+    author.toLowerCase().indexOf(searchTerm) > -1 || 
+    title.toLowerCase().indexOf(searchTerm) > -1
+
+    )); 
+};
+
 export const reshapeNewsData = news => ( 
   news.map(({ abstract, byline, geo_facet, multimedia, published_date, title, url }) => ({ 
     description: abstract || '', 

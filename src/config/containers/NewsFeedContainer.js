@@ -7,8 +7,9 @@ import { reshapeNewsData } from '../util/dataTransformations';
 
  
 const mapStateToProps = state => ({ 
-  news: reshapeNewsData(state.news) 
+  news: allNewsSelector(state) 
 });
+
 
 
 const mapDispatchToProps = dispatch => ( 
