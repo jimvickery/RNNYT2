@@ -1,3 +1,3 @@
-const NYT_API_KEY = 'YOUR_API_KEY_GOES_HERE'; 
+const NYT_API_KEY = '5a91c4ed2ffe412092d2dba7ea9f0113'; 
 export default NYT_API_KEY;
 
