@@ -2,5 +2,5 @@ import {
   AppRegistry 
 } from 'react-native'; 
 import App from './src/App';
-AppRegistry.registerComponent('RNNYT', () => App);
+AppRegistry.registerComponent('RNNYT2', () => App);
 
